@@ -24,27 +24,25 @@ To write a program to implement the Decision Tree Classifier Model for Predictin
 Program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
 Developed by: NISHA D
 RegisterNumber: 212223230143
+```
+```
 import pandas as pd
 data=pd.read_csv("/content/Employee.csv")
 data.head()
 
 ```
-## Output:
 ![image](https://github.com/user-attachments/assets/5425cf68-ea55-44b6-9871-61a8a8b45332)
 ```
 data.info()
 ```
-## Output:
 ![image](https://github.com/user-attachments/assets/ee56f76c-4492-4da6-b684-ff7431afd1f2)
 ```
 data.isnull().sum()
 ```
-## Output:
 ![image](https://github.com/user-attachments/assets/11e9589c-30ac-4792-9eaf-fd7fac333d5e)
 ```
 data["left"].value_counts()
 ```
-## Output:
 ![image](https://github.com/user-attachments/assets/6c44a146-e641-493b-89fd-38291bd6dd59)
 ```
 from sklearn.preprocessing import LabelEncoder
@@ -52,14 +50,14 @@ le=LabelEncoder()
 data["salary"]=le.fit_transform(data["salary"])
 data.head()
 ```
-## Output:
+
 ![image](https://github.com/user-attachments/assets/c2c01323-6fd5-445f-968b-ea8fdb43dc73)
 
 ```
 x=data[["satisfaction_level","last_evaluation","number_project","average_montly_hours","Work_accident","promotion_last_5years","salary"]]
 x.head()
 ```
-## Output:
+
 ![image](https://github.com/user-attachments/assets/f3b8278f-22e3-4c5c-bf6c-b2a6285d7667)
 
 ```
@@ -74,13 +72,13 @@ from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_pred)
 accuracy
 ```
-## Output:
+
 ![image](https://github.com/user-attachments/assets/86140f94-3708-4d40-825f-e581396d1bbb)
 
 ```
 dt.predict([[0.5,0.8,9,260,6,0,1,]])
 ```
-## Output:
+
 ![image](https://github.com/user-attachments/assets/a61a7ff0-7f70-4698-96a0-a44d6cd63c00)
 
 ## Result:
